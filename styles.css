@@ -6,8 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 #fireworks-container {
@@ -18,17 +17,20 @@ body {
     left: 0;
 }
 
-#start-button {
-    padding: 15px 30px;
-    font-size: 20px;
-    background-color: #ff5722;
+#message {
+    position: absolute;
     color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    font-size: 3rem;
+    text-shadow: 0 0 10px #ff5722, 0 0 20px #ff5722, 0 0 30px #ff5722;
     z-index: 10;
+    animation: glow 2s infinite alternate;
 }
 
-#start-button:hover {
-    background-color: #e64a19;
+@keyframes glow {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+    }
 }
